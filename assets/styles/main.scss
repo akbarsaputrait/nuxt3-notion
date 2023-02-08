@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://rsms.me/inter/inter.css");
+
+html,
+body,
+body #__nuxt {
+  margin: 0px;
+  height: 100%;
+}
+
+.container {
+  @apply mx-auto max-w-7xl px-0 sm:px-6 lg:px-8;
+}
+
+.text-default {
+  @apply text-black dark:text-white;
+}
+
+select:not([size]) {
+  background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3E%3Cpath stroke='%236B7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='m6 8 4 4 4-4'/%3E%3C/svg%3E");
+  background-position: right 0.5rem center;
+  background-repeat: no-repeat;
+  background-size: 1.5em 1.5em;
+  padding-right: 2.5rem;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+
+div.card-image {
+  @apply relative w-auto h-40 bg-gray-600 dark:bg-gray-200 p-4 rounded-lg bg-cover bg-center transform transition duration-500 hover:scale-105;
+
+  &::after {
+    content: "";
+    background-color: rgba(black, 0.5);
+    @apply absolute inset-0 rounded-lg;
+  }
+}
